@@ -29,6 +29,7 @@ ath79_setup_interfaces()
 		ucidef_set_interface_wan "eth1"
 		ucidef_add_switch "switch0" \
 			"0@eth0" "4:lan"
+		ucidef_set_interface "wwan0" device "/dev/cdc-wdm0" protocol "qmi"
 		;;
 	linksys,ea4500-v3)
 		ucidef_add_switch "switch0" \
